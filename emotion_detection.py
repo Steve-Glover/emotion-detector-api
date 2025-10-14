@@ -12,4 +12,5 @@ def emotion_detector(text_to_analyse):
     return emotion_dict
 
 if __name__ == "__main__":
-    print(emotion_detector("all work and no play makes steve a dull boy"))
+    answer = emotion_detector("I am so happy I am doing this")
+    print(answer["dominant_emotion"])
