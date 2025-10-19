@@ -1,5 +1,5 @@
-from flask import Flask, render_template, resonse
-from EmotionDetection import emotion_dector
+from flask import Flask, render_template, request
+from EmotionDetection import emotion_detector
 import json
 
 
@@ -11,9 +11,10 @@ def root():
 
 @app.route("/emotionDetector")
 def emotionDetector():
-    textToAnalyze = response.get.args("textToAnalyze")
-    detected_emotion = json.load(emotion_dector(textToAnalyze))
-    return_string = f"For the given statement, the system reponse is {detected_emotion}"
+    textToAnalyze = request.args.get("textToAnalyze")
+    detected_emotion = emotion_detector(textToAnalyze)
+    return f"For the given statement, the system reponse is {detected_emotion}"
+
     
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
