@@ -12,12 +12,12 @@ def root():
 @app.route("/emotionDetector")
 def emotionDetector():
     textToAnalyze = request.args.get("textToAnalyze")
-    if textToAnalyze is None or textToAnalyze == "":
-        response =  make_response("empty string supplied", 500) 
-        return response
     detected_emotion = emotion_detector(textToAnalyze)
+    if detected_emotion["dominant_emotion"] is None:
+        return "Invalid text! Please try again", 200
+
     return f"For the given statement, the system reponse is {detected_emotion}"
 
-    
+ 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
