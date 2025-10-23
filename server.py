@@ -1,6 +1,6 @@
 """ Module API Documentation """
 from flask import Flask, render_template, request
-from EmotionDetection import emotion_detector
+from nlp import emotion_detector
 
 
 app = Flask(__name__)

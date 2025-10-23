@@ -1,8 +1,8 @@
 import unittest
 from unittest import TestCase
-from EmotionDetection import emotion_detector
+from nlp import emotion_detector
 
-class TestEmotionDetection(TestCase):
+class TestNLPEmotionDetection(TestCase):
 
     def test_dominant_emotion(self):
         tests = [
