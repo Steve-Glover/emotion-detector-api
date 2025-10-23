@@ -7,7 +7,9 @@ A simple Flask web application that performs emotion detection on text input usi
 *  `templates/index.html` - Web interface template with Bootstrap styling
 * `static/mywebscript.js` - Frontend JavaScript for API communication
 
-The core implementation files (`server.py`, `nlp/emotion_detection.py`) and project documentation were developed as part of the assignment completion.
+The core implementation files (`server.py`, `nlp/emotion_detection.py`, `test/test_emotion_detection`) and project documentation were developed as part of the assignment completion.
+
+**!! Access to the watson.labs.skills.network is a dependancy for the emotion_detector function !!**
 
 ## Overview
 
